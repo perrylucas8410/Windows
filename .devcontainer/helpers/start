@@ -1,9 +1,15 @@
 #!/bin/bash
-echo "[SYSTEM] Booting Windows from 40GB Drive..."
-# Added sudo for full disk access
+echo "[SYSTEM] Booting Windows with optimized memory (6GB)..."
+
+# 1. Clear Linux RAM cache to make room for the VM
+sudo sync && echo 3 | sudo tee /proc/sys/vm/drop_caches
+
+# 2. Boot with balanced settings for 4-core machine
+# -m 6G: Reduced from 8G to prevent 'Cannot allocate memory'
+# -smp 2: Reduced to 2 cores for better stability on 4-vCPU hosts
 sudo qemu-system-x86_64 \
-  -m 8G \
-  -smp 4 \
+  -m 6G \
+  -smp 2 \
   -enable-kvm \
   -cpu host,hv_relaxed,hv_spinlocks=0x1fff,hv_vapic,hv_time \
   -drive file=/tmp/windows/data.vhdx,format=vhdx,cache=writeback,aio=threads \
