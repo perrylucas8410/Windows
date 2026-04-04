@@ -1,11 +1,11 @@
 #!/bin/bash
 echo "[SYSTEM] Starting noVNC Console..."
-# Use websockify to bridge QEMU to the web
+# Added 'index.html' redirect to vnc.html
+cp /usr/share/novnc/vnc.html /usr/share/novnc/index.html
 /usr/bin/websockify --web /usr/share/novnc/ 8006 localhost:5900 &
 
 echo "[SYSTEM] Booting Windows..."
-# -audiodev none: Mutes all ALSA errors
-# -vga virtio: Better video performance
+sudo sync && echo 3 | sudo tee /proc/sys/vm/drop_caches
 sudo qemu-system-x86_64 \
   -m 6G \
   -smp 2 \
