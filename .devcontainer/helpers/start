@@ -1,11 +1,17 @@
 #!/bin/bash
+# 1. KILL ANY OLD SESSIONS (Fixes 'Address already in use')
+sudo pkill -f websockify
+sudo pkill -f qemu-system-x86_64
+
 echo "[SYSTEM] Starting noVNC Console..."
-# Added 'index.html' redirect to vnc.html
-cp /usr/share/novnc/vnc.html /usr/share/novnc/index.html
-/usr/bin/websockify --web /usr/share/novnc/ 8006 localhost:5900 &
+# Use sudo to fix 'Permission denied'
+sudo cp /usr/share/novnc/vnc.html /usr/share/novnc/index.html
+sudo /usr/bin/websockify --web /usr/share/novnc/ 8006 localhost:5900 &
 
 echo "[SYSTEM] Booting Windows..."
 sudo sync && echo 3 | sudo tee /proc/sys/vm/drop_caches
+
+# REMOVED -device intel-hda -device hda-duplex to stop audio errors
 sudo qemu-system-x86_64 \
   -m 6G \
   -smp 2 \
@@ -16,5 +22,4 @@ sudo qemu-system-x86_64 \
   -device virtio-net-pci,netdev=net0 \
   -vga std \
   -vnc :0 \
-  -audiodev none,id=none \
-  -device intel-hda -device hda-duplex
+  -audiodev none,id=none
