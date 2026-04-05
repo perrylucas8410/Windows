@@ -3,8 +3,8 @@
     "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
     "forwardPorts": [ 8006, 8443 ],
     "portsAttributes": {
-        "8006": { "label": "QEMU Console", "onAutoForward": "openBrowser" },
-        "8443": { "label": "Amazon DCV", "onAutoForward": "notify" }
+        "8006": { "label": "NoVNC (DEBUG)", "onAutoForward": "notify" },
+        "8443": { "label": "Methalo Browser", "onAutoForward": "openBrowser" }
     },
     "runArgs": [ "--device=/dev/kvm", "--privileged" ],
     "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/Windows,type=bind",
