@@ -1,1 +1,24 @@
-
+{
+    "name":  "Methalo (Defaul)t",
+    "image":  "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "forwardPorts":  [
+                         8443
+                     ],
+    "portsAttributes":  {
+                            "8443":  {
+                                         "onAutoForward":  "openBrowser",
+                                         "label":  "Methalo Browser"
+                                     }
+                        },
+    "runArgs":  [
+                    "--device=/dev/kvm",
+                    "--privileged"
+                ],
+    "workspaceMount":  "source=${localWorkspaceFolder},target=/workspaces/Windows,type=bind",
+    "workspaceFolder":  "/workspaces/Windows",
+    "onCreateCommand":  "sudo bash .devcontainer/2-core/onCreateCommand.sh",
+    "hostRequirements":  {
+                             "cpus":  2,
+                             "memory":  "8gb"
+                         }
+}
