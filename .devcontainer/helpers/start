@@ -14,7 +14,7 @@ echo "[SYSTEM] Starting noVNC Console..."
 sudo cp /usr/share/novnc/vnc.html /usr/share/novnc/index.html 2>/dev/null
 sudo /usr/bin/websockify --web /usr/share/novnc/ 8006 localhost:5900 >/dev/null 2>&1 &
 
-echo "[SYSTEM] Booting Windows (Premium Myrtille Mode)..."
+echo "[SYSTEM] Booting Windows (Methalo RDP Mode)..."
 # Port Forwarding Checklist:
 # 8443 -> 443 (Myrtille HTTPS)
 # 8006 -> 8006 (noVNC Console)
