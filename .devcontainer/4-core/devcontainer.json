@@ -2,17 +2,12 @@
     "name":  "Methalo 4-Core",
     "image":  "mcr.microsoft.com/devcontainers/base:ubuntu",
     "forwardPorts":  [
-                         8006,
                          8443
                      ],
     "portsAttributes":  {
-                            "8006":  {
-                                         "label":  "NoVNC (DEBUG)",
-                                         "onAutoForward":  "notify"
-                                     },
                             "8443":  {
-                                         "label":  "Methalo Browser",
-                                         "onAutoForward":  "openBrowser"
+                                         "onAutoForward":  "openBrowser",
+                                         "label":  "Methalo Browser"
                                      }
                         },
     "runArgs":  [
