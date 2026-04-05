@@ -1,5 +1,5 @@
 {
-    "name": "Methalo QEMU Cloud",
+    "name": "Methalo 2-Core",
     "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
     "forwardPorts": [ 8006, 8443 ],
     "portsAttributes": {
