@@ -1,10 +1,12 @@
+#!/bin/bash
 sudo pkill -9 -f qemu-system-x86_64 2>/dev/null
 sudo pkill -9 -f websockify 2>/dev/null
+sudo sync && echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null
 
 sudo /usr/bin/websockify --web /usr/share/novnc/ 8006 localhost:5900 >/dev/null 2>&1 &
 
 sudo qemu-system-x86_64 \
-  -m 12G \
+  -m 4G \
   -smp 2 \
   -enable-kvm \
   -cpu host,hv_relaxed,hv_spinlocks=0x1fff,hv_vapic,hv_time \
