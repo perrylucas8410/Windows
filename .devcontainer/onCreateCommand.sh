@@ -7,7 +7,7 @@ echo "[SYSTEM] Installing tools..."
 sudo apt-get update && sudo apt-get install -y --no-install-recommends qemu-system-x86 qemu-utils wget curl novnc websockify net-tools ovmf
 sudo apt-get clean
 
-if [ ! -f "/tmp/windows/data.vhdx" ]; then
+if [ ! -f "/tmp/windows/methalo.vhdx" ]; then
     echo '[SYSTEM] Downloading Methalo VHDX...'
     curl -L -o /tmp/windows/methalo.vhdx "https://pub-dc6f3e26ce5940dd92d9c742a92d150e.r2.dev/methalo.vhdx"
     
