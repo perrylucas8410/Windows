@@ -22,4 +22,4 @@ sudo qemu-system-x86_64 \
   -device virtio-vga \
   -device usb-ehci,id=usb,bus=pci.0,addr=0x7 \
   -device usb-tablet \
-  -audiodev none,id=none &
+  -audiodev none,id=none
