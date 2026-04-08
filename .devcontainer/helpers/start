@@ -9,8 +9,8 @@ sudo /usr/bin/websockify --web /usr/share/novnc/ 8006 localhost:5900 >/dev/null 
 
 echo "[SYSTEM] Booting Methalo Myrtille..."
 sudo qemu-system-x86_64 \
-  -m 5G \
-  -smp 2 \
+  -m 12G \
+  -smp 4 \
   -enable-kvm \
   -cpu host,hv_relaxed,hv_spinlocks=0x1fff,hv_vapic,hv_time \
   -drive if=pflash,format=raw,readonly=on,file=/usr/share/OVMF/OVMF_CODE_4M.fd \
