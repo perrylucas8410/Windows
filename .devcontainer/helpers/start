@@ -9,7 +9,7 @@ sudo /usr/bin/websockify --web /usr/share/novnc/ 8006 localhost:5900 >/dev/null 
 
 echo "[SYSTEM] Booting Windows (Myrtille Port 80 Mode)..."
 sudo qemu-system-x86_64 \
-  -m 12G \
+  -m 11G \
   -smp 4 \
   -enable-kvm \
   -cpu host,hv_relaxed,hv_spinlocks=0x1fff,hv_vapic,hv_time \
