@@ -16,11 +16,11 @@ sudo qemu-system-x86_64 \
   -cpu host,hv_relaxed,hv_spinlocks=0x1fff,hv_vapic,hv_time \
   -drive if=pflash,format=raw,readonly=on,file=/usr/share/OVMF/OVMF_CODE_4M.fd \
   -drive file=/tmp/windows/methalo.vhdx,format=vhdx,cache=writeback,aio=threads \
-  -netdev user,id=net0,hostfwd=tcp::8443-:80 \
+  -netdev user,id=net0,hostfwd=tcp::8443-:8443 \
   -device e1000,netdev=net0 \
   -vnc :0 \
   -vga none \
   -device virtio-vga \
   -device usb-ehci,id=usb,bus=pci.0,addr=0x7 \
   -device usb-tablet \
-  -audiodev none,id=none &
+  -audiodev none,id=none
