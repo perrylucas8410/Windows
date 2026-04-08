@@ -1,17 +1,20 @@
 {
     "name": "Methalo (Default)",
     "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-    "forwardPorts": [ 8006, 8443 ],
+    "forwardPorts": [ 8006, 8443, 8080, 8008, 3389 ],
     "portsAttributes": {
-        "8006": { "label": "Debug", "onAutoForward": "notify" },
-        "8443": { "label": "Methalo", "onAutoForward": "notify" }
+        "8006": { "label": "NoVNC (DEBUG)", "onAutoForward": "notify" },
+        "8443": { "label": "Methalo Browser", "onAutoForward": "openBrowser" },
+        "8080": { "label": "Myrtille (HTTP)", "onAutoForward": "openBrowser" },
+        "8008": { "label": "Web Port (8008)", "onAutoForward": "notify" },
+        "3389": { "label": "RDP Access", "onAutoForward": "notify" }
     },
     "runArgs": [ "--device=/dev/kvm", "--privileged" ],
     "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/Windows,type=bind",
     "workspaceFolder": "/workspaces/Windows",
     "onCreateCommand": "sudo bash .devcontainer/onCreateCommand.sh",
     "hostRequirements": {
-        "cpus": 2,
-        "memory": "8gb"
+        "cpus": 4,
+        "memory": "16gb"
     }
 }
