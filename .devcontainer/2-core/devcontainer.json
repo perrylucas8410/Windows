@@ -1,5 +1,5 @@
 {
-    "name": "Methalo (Default)",
+    "name": "Methalo (2-core)",
     "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
     "forwardPorts": [ 8006, 8443 ],
     "portsAttributes": {
