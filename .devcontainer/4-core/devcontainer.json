@@ -4,12 +4,12 @@
     "forwardPorts": [ 8008, 8006 ],
     "portsAttributes": {
         "8008": { "label": "Methalo Browser", "onAutoForward": "notify" },
-        "8006": { "label": "NoVNC (Debug)", "onAutoForward": "notify" }
+        "8006": { "label": "Console", "onAutoForward": "notify" }
     },
     "runArgs": [ "--device=/dev/kvm", "--privileged" ],
     "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/Windows,type=bind",
     "workspaceFolder": "/workspaces/Windows",
-    "onCreateCommand": "sudo bash .devcontainer/onCreateCommand.sh",
+    "onCreateCommand": "sudo bash .devcontainer/4-core/onCreateCommand.sh",
     "hostRequirements": {
         "cpus": 4,
         "memory": "16gb"
