@@ -39,4 +39,6 @@ Since Codespaces are temporary, they will delete your data if they stop, and the
 4.  Next time you start a Codespace, use **`vm-import`** with that link to pick up exactly where you left off.
 5.  If you don't want to stay and watch the VM save, then you can close the tab, and when it's done, a link will get sent to the email you put in
 
-*Created by Methalo*
+##  VM options visual
+
+> [Use for the import link] <img width="1348" height="607" alt="Import" src="https://github.com/user-attachments/assets/1e527729-9c33-4290-b13e-124ccdce09ca" />
