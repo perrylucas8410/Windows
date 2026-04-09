@@ -21,7 +21,7 @@ Run a fully functional Windows VM directly inside a GitHub Codespace with high-p
 Once your codespace is ready (usually takes 10-15 minutes to install):
 
 **Done**
-<img width="1362" height="605" alt="done" src="https://github.com/user-attachments/assets/5c20f6dc-259a-418a-95de-1a58712962d9" />
+> <img width="1362" height="605" alt="done" src="https://github.com/user-attachments/assets/5c20f6dc-259a-418a-95de-1a58712962d9" />
 
 *   **Open a terminal:** Right-click the codespace and click **"New Terminal"** after the codespace is ready.
 *   **To start a fresh VM:** Type `start`. (The first boot will download the 23GB disk automatically if the initial install fails).
@@ -53,4 +53,4 @@ Since Codespaces are temporary, they will delete your data if they stop, and the
 
 >**2-core settings** <img width="1345" height="606" alt="2-core" src="https://github.com/user-attachments/assets/920dff51-d827-4f66-b76e-5d2d5d644fed" />
 
->**4-core settings (recommended) <img width="1346" height="606" alt="4-core" src="https://github.com/user-attachments/assets/d6afaba3-c5df-4262-b86c-2cfe1d8b1f59" />
+>**4-core settings (recommended)** <img width="1346" height="606" alt="4-core" src="https://github.com/user-attachments/assets/d6afaba3-c5df-4262-b86c-2cfe1d8b1f59" />
