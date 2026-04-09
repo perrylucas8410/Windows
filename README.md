@@ -41,4 +41,4 @@ Since Codespaces are temporary, they will delete your data if they stop, and the
 
 ##  VM options visual
 
-> **Use for the import link** <img width="1348" height="607" alt="Import" src="https://github.com/user-attachments/assets/1e527729-9c33-4290-b13e-124ccdce09ca" />
+**Use for the import link** <img width="1348" height="607" alt="Import" src="https://github.com/user-attachments/assets/1e527729-9c33-4290-b13e-124ccdce09ca" />
