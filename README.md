@@ -31,9 +31,11 @@ Once your codespace is ready (usually takes 10-15 minutes to install):
 
 After you run `start`, wait about 3-4 minutes for Windows to boot.
 
-1.  **Browser Access (Methalo Browser):** Click the ports tab at the bottom and click on the Debug 8006 to see it booting, and then click on the 8008 Methalo Browser, and it'll take you to an IIS page. Then, in the search bar, add /myrtille/ to sign into it (e.g., `https://.../myrtille/`).
+1.  **Browser Access (Methalo Browser):** Click the ports tab (as shown in the image above) and click on the Debug 8006 to see it booting, and then click on the 8008 Methalo Browser, and it'll take you to an IIS page. Then, in the search bar, add /myrtille/ to sign into it (EX, `https://urban-space-halibut-wrwqv6v9q6jqf96vg-8008.app.github.dev/` to `https://urban-space-halibut-wrwqv6v9q6jqf96vg-8008.app.github.dev/myrtille/`) (Just an example link, yours will be different).
 
-> [IMAGE PLACEHOLDER: Terminal Success Message]
+> **Before** <img width="1361" height="675" alt="IIS" src="https://github.com/user-attachments/assets/5aadab01-2762-46b6-b514-9e9522d5ede0" />
+>**After**
+
 
 ##  Export & Backup Feature
 
@@ -47,8 +49,8 @@ Since Codespaces are temporary, they will delete your data if they stop, and the
 
 ##  VM options visual
 
-**Use for the import link** <img width="1348" height="607" alt="Import" src="https://github.com/user-attachments/assets/1e527729-9c33-4290-b13e-124ccdce09ca" />
+>**Use for the import link** <img width="1348" height="607" alt="Import" src="https://github.com/user-attachments/assets/1e527729-9c33-4290-b13e-124ccdce09ca" />
 
-**2-core settings** <img width="1345" height="606" alt="2-core" src="https://github.com/user-attachments/assets/920dff51-d827-4f66-b76e-5d2d5d644fed" />
+>**2-core settings** <img width="1345" height="606" alt="2-core" src="https://github.com/user-attachments/assets/920dff51-d827-4f66-b76e-5d2d5d644fed" />
 
-**4-core settings (recommended) <img width="1346" height="606" alt="4-core" src="https://github.com/user-attachments/assets/d6afaba3-c5df-4262-b86c-2cfe1d8b1f59" />
+>**4-core settings (recommended) <img width="1346" height="606" alt="4-core" src="https://github.com/user-attachments/assets/d6afaba3-c5df-4262-b86c-2cfe1d8b1f59" />
