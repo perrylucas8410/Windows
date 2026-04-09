@@ -1,15 +1,15 @@
-# 🚀 Methalo Windows
+#  Methalo Windows
 
 Run a fully functional Windows VM directly inside a GitHub Codespace with high-performance networking and secure browser access.
 
-## 🛠️ Step 1: Creating your Codespace
+##  Step 1: Creating your Codespace
 
 1.  Click the **"Code"** button on this repository.
 2.  Select the **"Codespaces"** tab.
 3.  Click the **"..."** (Options) and select **"New with options..."**.
 4.  **Machine Type:** 
-    *   **Recommended:** 4-core, 16GB RAM.
-    *   **Minimum:** 2-core, 8GB RAM.
+    *   **Recommended:** 4-core, 12GB RAM.
+    *   **Minimum:** 2-core, 5GB RAM.
 5.  Click **"Create codespace"**.
 
 > [IMAGE PLACEHOLDER: Creating Codespace Options]
