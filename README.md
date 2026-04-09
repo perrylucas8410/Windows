@@ -34,8 +34,7 @@ After you run `start`, wait about 3-4 minutes for Windows to boot.
 1.  **Browser Access (Methalo Browser):** Click the ports tab (as shown in the image above) and click on the Debug 8006 to see it booting, and then click on the 8008 Methalo Browser, and it'll take you to an IIS page. Then, in the search bar, add /myrtille/ to sign into it (EX, `https://urban-space-halibut-wrwqv6v9q6jqf96vg-8008.app.github.dev/` to `https://urban-space-halibut-wrwqv6v9q6jqf96vg-8008.app.github.dev/myrtille/`) (Just an example link, yours will be different).
 
 > **Before** <img width="1361" height="675" alt="IIS" src="https://github.com/user-attachments/assets/5aadab01-2762-46b6-b514-9e9522d5ede0" />
->**After**
-
+>**After** <img width="1362" height="674" alt="myrtille" src="https://github.com/user-attachments/assets/883856d1-2f96-4452-8424-260367a924dd" />
 
 ##  Export & Backup Feature
 
