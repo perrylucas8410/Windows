@@ -18,8 +18,9 @@ Run a fully functional Windows VM directly inside a GitHub Codespace with high-p
 
 ##  Step 2: Booting Windows
 
-Once your terminal is ready (usually takes 10-15 minutes to install):
+Once your codespace is ready (usually takes 10-15 minutes to install):
 
+*   **Open a terminal:** Right-click the codespace and click **"New Terminal"** (You can't create terminals while the codespace is being made).
 *   **To start a fresh VM:** Type `start`. (The first boot will download the 23GB disk automatically if the initial install fails).
 *   **To restore a backup:** Type `vm-import` and paste your link.
 
