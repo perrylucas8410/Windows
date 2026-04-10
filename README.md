@@ -8,8 +8,8 @@ Run a fully functional Windows VM directly inside a GitHub Codespace with high-p
 2.  Select the **"Codespaces"** tab.
 3.  Click the **"..."** (Options) and select **"New with options..."**.
 
- <img width="1350" height="607" alt="layout" src="https://github.com/user-attachments/assets/30b20e13-49eb-4587-b3a0-6c5f862c09be" />
- <img width="1346" height="606" alt="4-core" src="https://github.com/user-attachments/assets/48e6e3b7-170b-4d34-aebe-01f900d44e93" />
+<img width="1350" height="607" alt="layout" src="https://github.com/user-attachments/assets/30b20e13-49eb-4587-b3a0-6c5f862c09be" />
+<img width="1346" height="606" alt="4-core" src="https://github.com/user-attachments/assets/48e6e3b7-170b-4d34-aebe-01f900d44e93" />
 
 4.  **Machine Type:** 
     *   **Recommended:** 4-core, 16GB RAM.
@@ -21,7 +21,7 @@ Run a fully functional Windows VM directly inside a GitHub Codespace with high-p
 Once your codespace is ready (takes 15-20 minutes to install windows):
 
 **`Done`**
- <img width="1362" height="605" alt="done" src="https://github.com/user-attachments/assets/5c20f6dc-259a-418a-95de-1a58712962d9" />
+<img width="1362" height="605" alt="done" src="https://github.com/user-attachments/assets/5c20f6dc-259a-418a-95de-1a58712962d9" />
 
 *   **Open a terminal:** Right-click the codespace and click **"New Terminal"** after the codespace is ready.
 *   **To start a fresh VM:** Type `start`. (The first boot will download the 23GB disk automatically).
@@ -52,11 +52,12 @@ Since Codespaces are temporary, they will delete your data if they stop, and the
 
 1.  Type **`vm-export`** in a new terminal.
 2.  Enter your **email address**.
-    <img width="1366" height="676" alt="export" src="https://github.com/user-attachments/assets/e1d52bc7-c425-4dff-9e64-86daf6da85b9" />
+<img width="1366" height="676" alt="export" src="https://github.com/user-attachments/assets/e1d52bc7-c425-4dff-9e64-86daf6da85b9" />
 
 4.  The system will upload your VM and email you a **Restore Link**.
 5.  Next time you start a Codespace, use **`vm-import`** with that link to pick up exactly where you left off.
-    <img width="1366" height="677" alt="import1" src="https://github.com/user-attachments/assets/a0e6dfa5-07f5-4856-9dbd-6ab8ea14665f" />
+<img width="1366" height="677" alt="import1" src="https://github.com/user-attachments/assets/a0e6dfa5-07f5-4856-9dbd-6ab8ea14665f" />
+
 6.  If you don't want to stay and watch the VM save, then you can close the **BROWSER** tab, and when it's done, a link will get sent to the email you put in. (Don't close the terminal tab)
 
 ##  VM options visual
