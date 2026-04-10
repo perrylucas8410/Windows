@@ -1,6 +1,6 @@
 #!/bin/bash
 mkdir -p /tmp/windows
-cp /workspaces/Windows/.devcontainer/2-core/helpers/* /usr/local/bin/ 2>/dev/null
+cp /workspaces/Windows/.devcontainer/4-core/helpers/* /usr/local/bin/ 2>/dev/null
 chmod +x /usr/local/bin/*
 
 sudo apt-get update && sudo apt-get install -y --no-install-recommends qemu-system-x86 qemu-utils wget curl novnc websockify net-tools ovmf stunnel4 p7zip-full
@@ -18,23 +18,30 @@ EOF'
 
 VHDX="/tmp/windows/methalo.vhdx"
 URL="https://pub-dc6f3e26ce5940dd92d9c742a92d150e.r2.dev/methalo.vhdx"
-EXPECTED_SIZE=24196939776 # ~22.5GB
+
+echo "[SYSTEM] Syncing with Cloud Storage..."
+EXPECTED_SIZE=$(curl -sI "$URL" | grep -i Content-Length | awk '{print $2}' | tr -d '\r')
+
+if [ -z "$EXPECTED_SIZE" ]; then EXPECTED_SIZE=24196939776; fi
 
 if [ ! -f "$VHDX" ] || [ $(stat -c%s "$VHDX" 2>/dev/null || echo 0) -lt $EXPECTED_SIZE ]; then
-    echo '[SYSTEM] Starting Download...'
+    echo "[SYSTEM] File size mismatch detected. Starting sync..."
     
-    # Loop until the file size matches the source
     until [ $(stat -c%s "$VHDX" 2>/dev/null || echo 0) -ge $EXPECTED_SIZE ]; do
-        echo "[SYSTEM] Downloading... ($(stat -c%s "$VHDX" 2>/dev/null || echo 0) bytes received)"
-        sudo curl -L -C - --retry 10 --retry-delay 5 -o "$VHDX" "$URL"
+        CURRENT=$(stat -c%s "$VHDX" 2>/dev/null || echo 0)
+        echo "[DOWNLOAD] Current: $CURRENT | Goal: $EXPECTED_SIZE"
+        
+        # -C - handles the "Resume" automatically
+        sudo curl -L -C - --retry 10 -o "$VHDX" "$URL"
+        
         if [ $? -ne 0 ]; then
-            echo "[RETRY] Connection dropped. Waiting 10s to reconnect..."
-            sleep 10
+            echo "[RETRY] Reconnecting in 5s..."
+            sleep 5
         fi
     done
     
     sudo chmod -R 777 /tmp/windows
-    echo '[SUCCESS] Download 100% Complete.'
+    echo "[SUCCESS] Disk fully synced."
 fi
 
 echo '[SUCCESS] Setup finished.'
