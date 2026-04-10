@@ -52,9 +52,11 @@ Since Codespaces are temporary, they will delete your data if they stop, and the
 
 1.  Type **`vm-export`** in a new terminal.
 2.  Enter your **email address**.
-3.  The system will upload your VM and email you a **Restore Link**.
-4.  Next time you start a Codespace, use **`vm-import`** with that link to pick up exactly where you left off.
-5.  If you don't want to stay and watch the VM save, then you can close the tab, and when it's done, a link will get sent to the email you put in
+    <img width="1366" height="676" alt="export" src="https://github.com/user-attachments/assets/e1d52bc7-c425-4dff-9e64-86daf6da85b9" />
+
+4.  The system will upload your VM and email you a **Restore Link**.
+5.  Next time you start a Codespace, use **`vm-import`** with that link to pick up exactly where you left off.
+6.  If you don't want to stay and watch the VM save, then you can close the tab, and when it's done, a link will get sent to the email you put in
 
 ##  VM options visual
 
