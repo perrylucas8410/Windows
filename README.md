@@ -51,8 +51,8 @@ After the install is done, wait about 2-3 minutes for Windows to set up the RDP 
 Since Codespaces are temporary, they will delete your data if they stop, and they stop after 30 minutes of inactivity (can be set to 240 minutes), so you can save and import the saved VM if you want to save data:
 
 1.  Type **`vm-export`** in a new terminal.
-2.  Enter your **email address**.
-<img width="1366" height="676" alt="export" src="https://github.com/user-attachments/assets/e1d52bc7-c425-4dff-9e64-86daf6da85b9" />
+2.  Enter your **email address**, **Name**, and **Save Name**.
+<img width="1366" height="768" alt="Screenshot 2026-04-12 044728" src="https://github.com/user-attachments/assets/fbabdd01-c283-4763-ae06-cad36d48a84a" />
 
 4.  The system will upload your VM and email you a **Restore Link**.
 5.  Next time you start a Codespace, use **`vm-import`** with that link to pick up exactly where you left off.
