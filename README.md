@@ -1,6 +1,3 @@
-
-<mp4 width="1350" height="607" alt="layout" src="https://github.com/user-attachments/assets/10d48663-4147-4adb-ada3-c15119f73a85" />
-
 #  Methalo Windows
 
 Run a fully functional Windows VM directly inside a GitHub Codespace with high-performance networking.
