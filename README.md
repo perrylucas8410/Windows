@@ -54,7 +54,7 @@ Since Codespaces are temporary, they will delete your data if they stop, and the
 2.  Enter your **email address**, **Name**, and **Save Name**.
 <img width="1366" height="678" alt="export" src="https://github.com/user-attachments/assets/a62876ac-d567-4ccd-8f9b-f273de6a2b64" />
 
-4.  The system will upload your VM and email you a **Restore Link**.
+4.  The system will upload your VM and email you a **Restore Link**, or if you go to https://methalo.lol and sign up with the email that you used and then go to account settings, a list of your links will be there. 
 5.  Next time you start a Codespace, use **`vm-import`** with that link to pick up exactly where you left off.
 <img width="1366" height="677" alt="import1" src="https://github.com/user-attachments/assets/a0e6dfa5-07f5-4856-9dbd-6ab8ea14665f" />
 
