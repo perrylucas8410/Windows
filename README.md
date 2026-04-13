@@ -2,7 +2,7 @@
 
 </h1>
 
-[f](https://pub-dc6f3e26ce5940dd92d9c742a92d150e.r2.dev/setup.webm)
+[f](https://youtu.be/LX9VmZ2nRz4))
 
 Run a fully functional Windows VM directly inside a GitHub Codespace with high-performance networking.
 
