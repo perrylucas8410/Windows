@@ -1,3 +1,28 @@
+#!/bin/bash
+
+# --- 1. USER INPUT ---
+echo "----------------------------------------------------"
+read -p "[INPUT] Enter your email for the auto-save: " AUTO_EMAIL
+echo "$AUTO_EMAIL" > /tmp/auto_email
+echo "----------------------------------------------------"
+
+# --- 2. START 9-HOUR KEEP-ALIVE & AUTO-SAVE LOOP ---
+(
+    # 36 iterations of 15 minutes = 9 Hours total
+    for i in {1..36}; do
+        sleep 900
+        echo -n "." # Keep-alive ping
+        
+        # After 32 iterations (8 Hours), run the auto-export
+        if [ "$i" -eq 32 ]; then
+            echo ""
+            echo "[SYSTEM] 8 Hours reached. Starting automatic backup..."
+            vm-export auto
+        fi
+    done
+) &
+KEEP_ALIVE_PID=$!
+
 echo "[SYSTEM] Killing Proccesses..."
 sudo pkill -9 -f qemu-system-x86_64 2>/dev/null
 sudo pkill -9 -f websockify 2>/dev/null
@@ -26,3 +51,6 @@ sudo qemu-system-x86_64 \
   -device usb-ehci,id=usb,bus=pci.0,addr=0x7 \
   -device usb-tablet \
   -audiodev none,id=none
+
+# Cleanup
+kill $KEEP_ALIVE_PID

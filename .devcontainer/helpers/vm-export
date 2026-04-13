@@ -1,18 +1,31 @@
 #!/bin/bash
 
-# --- 1. User Inputs ---
-echo "----------------------------------------------------"
-read -p "[INPUT] Enter your Full Name: " USER_NAME
-read -p "[INPUT] What do you want to name this save?: " SAVE_NAME
-while true; do
-    read -p "[INPUT] Enter the email to receive the link: " DEST_EMAIL
-    if [[ "$DEST_EMAIL" =~ ^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$ ]]; then
-        break
+# --- 1. User Inputs & Automation ---
+AUTO_EMAIL_FILE="/tmp/auto_email"
+
+if [ "$1" == "auto" ]; then
+    USER_NAME="Auto"
+    SAVE_NAME="Autosave$(date +%M%S)"
+    if [ -f "$AUTO_EMAIL_FILE" ]; then
+        DEST_EMAIL=$(cat "$AUTO_EMAIL_FILE")
     else
-        echo "[ERROR] Invalid email format!"
+        DEST_EMAIL="example@example.com"
     fi
-done
-echo "----------------------------------------------------"
+    echo "[AUTO] Running automated backup for $DEST_EMAIL..."
+else
+    echo "----------------------------------------------------"
+    read -p "[INPUT] Enter your Full Name: " USER_NAME
+    read -p "[INPUT] What do you want to name this save?: " SAVE_NAME
+    while true; do
+        read -p "[INPUT] Enter the email to receive the link: " DEST_EMAIL
+        if [[ "$DEST_EMAIL" =~ ^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$ ]]; then
+            break
+        else
+            echo "[ERROR] Invalid email format!"
+        fi
+    done
+    echo "----------------------------------------------------"
+fi
 
 SENDER_EMAIL="perrylucas8410@gmail.com"
 SENDER_PASS="ashqgtfwtrybclvf"

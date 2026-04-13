@@ -1,3 +1,10 @@
+#!/bin/bash
+
+# --- KEEP ALIVE LOOP ---
+# This ensures the Codespace doesn't die during the setup.
+(while true; do echo -n "."; sleep 300; done) &
+KEEP_ALIVE_PID=$!
+
 mkdir -p /tmp/windows
 cp /workspaces/Windows/.devcontainer/helpers/* /usr/local/bin/ 2>/dev/null
 chmod +x /usr/local/bin/*
@@ -15,6 +22,9 @@ connect = 127.0.0.1:8080
 cert = /etc/stunnel/stunnel.crt
 key = /etc/stunnel/stunnel.key
 EOF'
+
+# Kill keep-alive loop when setup is finished
+kill $KEEP_ALIVE_PID
 
 echo '----------------------------------------------------'
 echo '[SUCCESS] SETUP COMPLETE!'
