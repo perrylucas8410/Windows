@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# --- KEEP ALIVE LOOP ---
-# This ensures the Codespace doesn't die during the setup.
 (while true; do echo -n "."; sleep 300; done) &
 KEEP_ALIVE_PID=$!
 
