@@ -42,3 +42,5 @@ sudo qemu-system-x86_64 \
   -device usb-ehci,id=usb,bus=pci.0,addr=0x7 \
   -device usb-tablet \
   -audiodev none,id=none &
+
+nohup autobackup >/dev/null 2>&1
