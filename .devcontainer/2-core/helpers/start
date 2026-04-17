@@ -28,8 +28,8 @@ sleep 2
 
 echo "[SYSTEM] Booting Windows..."
 sudo qemu-system-x86_64 \
-  -m 11G \
-  -smp 4 \
+  -m 5G \
+  -smp 2 \
   -enable-kvm \
   -cpu host,hv_relaxed,hv_spinlocks=0x1fff,hv_vapic,hv_time \
   -drive if=pflash,format=raw,readonly=on,file=/usr/share/OVMF/OVMF_CODE_4M.fd \
@@ -43,12 +43,10 @@ sudo qemu-system-x86_64 \
   -device usb-tablet \
   -audiodev none,id=none &
 
-# Launch autobackup with log file
 nohup autobackup > /tmp/autobackup.log 2>&1 &
 
 echo "[SYSTEM] VM started. Monitoring backup timer..."
 echo "[SYSTEM] Press Ctrl+C to stop watching (VM keeps running)."
 
-# Auto-run tail to keep terminal alive
 sleep 2
 tail -f /tmp/autobackup.log
