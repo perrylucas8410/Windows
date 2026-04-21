@@ -1,11 +1,19 @@
 #!/bin/bash
-for i in {1..36}; do
-    sleep 900
-    echo -n . >> /tmp/autobackup.log
-    
-    # Run cache clear every time a dot appears
-    sudo sync && echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null
 
+# Main loop for 36 dots (9 hours total)
+for i in {1..36}; do
+    
+    # Inner loop to run 15 times (once every minute)
+    for j in {1..15}; do
+        sleep 60
+        # Clear cache every 1 minute
+        sudo sync && echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null
+    done
+
+    # Run every 15 minutes
+    echo -n . >> /tmp/autobackup.log
+
+    # Check for the 8-hour mark (32 dots * 15 mins = 480 mins)
     if [ $i -eq 32 ]; then
         echo >> /tmp/autobackup.log
         echo "[BACKUP] 8 Hours reached. Starting automatic backup..." >> /tmp/autobackup.log
