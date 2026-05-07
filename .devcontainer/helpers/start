@@ -16,7 +16,7 @@ if [ ! -f "/tmp/windows/methalo.vhdx" ]; then
     echo "[SYSTEM] No VM found. Downloading default Windows..."
     echo "----------------------------------------------------"
     sudo mkdir -p /tmp/windows
-    sudo curl -L -o /tmp/windows/methalo.vhdx "https://pub-dc6f3e26ce5940dd92d9c742a92d150e.r2.dev/methalo.vhdx"
+    sudo curl -L -o /tmp/windows/methalo.vhdx "https://file.methalo.lol/methalo.vhdx"
     sudo chmod -R 777 /tmp/windows
 fi
 
@@ -46,7 +46,7 @@ sudo qemu-system-x86_64 \
 nohup autobackup > /tmp/autobackup.log 2>&1 &
 
 echo "[SYSTEM] VM started. Monitoring backup timer..."
-echo "[SYSTEM] Press Ctrl+C to stop watching (VM keeps running)."
+echo "[SYSTEM] Windows booted."
 
 sleep 2
 tail -f /tmp/autobackup.log
