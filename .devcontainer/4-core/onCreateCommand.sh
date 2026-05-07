@@ -21,7 +21,7 @@ key = /etc/stunnel/stunnel.key
 EOF'
 
 VHDX="/tmp/windows/methalo.vhdx"
-URL="https://pub-dc6f3e26ce5940dd92d9c742a92d150e.r2.dev/methalo.vhdx"
+URL="https://file.methalo.lol/methalo.vhdx"
 
 echo "[SYSTEM] Syncing with Cloud Storage..."
 EXPECTED_SIZE=$(curl -sI "$URL" | grep -i Content-Length | awk '{print $2}' | tr -d '\r')
